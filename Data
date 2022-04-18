@@ -1,4 +1,0 @@
-import pandas as pd
-
-df = pd.read_csv (r'/Users/dominicparente/Desktop/Scorecard22.csv')
-print (df)
