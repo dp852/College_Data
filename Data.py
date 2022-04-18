@@ -4,11 +4,11 @@ import pandas as pd
 base_url = "https://api.data.gov/ed/collegescorecard/v1/"
 dataset = "schools.json?"
 filter_params = "school.degrees_awarded.predominant=3"
-#fields = ["id",
-          #"school.name",
-          #".school.locale"
-          #"latest.student.size",
-          #"location.lat",
+fields = ["id",
+          "school.name",
+          ".school.locale"
+          "latest.student.size",
+          "location.lat",
           #"location.lon",
           #"location.city",
           #"location.state",
@@ -34,7 +34,7 @@ filter_params = "school.degrees_awarded.predominant=3"
 
 
 
-          #"oops.variable.does.not.exist"]
+          "oops.variable.does.not.exist"]
 options = "&per_page=100&page=0"
 api_key = "&api_key=cZauPwdyxxKrzuVe7mM8WYOrWAQZymc9UsHhn3QV" 
 
