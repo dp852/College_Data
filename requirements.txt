@@ -1,0 +1,16 @@
+# this is the requirements.txt file...
+
+#
+# DEVELOPMENT / PRODUCTION
+#
+
+python-dotenv
+
+pandas
+requests
+
+
+flask
+
+
+gunicorn
