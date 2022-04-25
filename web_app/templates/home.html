@@ -1,18 +1,12 @@
-{% extends "layout.html" %}
+{% set active_page = "weather_form" %}
 
 {% block content %}
 
-    <h2>College Input</h2>
+    <h2>College</h2>
 
-    <p>Request a 4-year college to reveal quick facts</p>
+    <p>Paragraph text goes here...</p>
 
-    <form action="college" method="POST">
-
-        <label>College:</label>
-        <input type="text" name="zip_code" placeholder="georgetown university" value="georgetown university">
-        <br>
-
-        <button>Submit</button>
+    <form action="fetch_data()" method="POST">
     </form>
 
 {% endblock %}
