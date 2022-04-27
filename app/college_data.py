@@ -26,6 +26,7 @@ if __name__== "__main__":
     df=fetch_data()
     print(df.head)
 
+'''
 def data_request(val):
   print(val)
   median_math_sat = int(df['latest.admissions.sat_scores.midpoint.math'][df[df['school.name'] == val].index[0]])
@@ -41,7 +42,10 @@ def data_request(val):
   percent_black =  "{:.2%}".format(df['latest.student.demographics.race_ethnicity.black'][df[df['school.name'] == val].index[0]], "%")
   percent_hispanic = "{:.2%}".format(df['latest.student.demographics.race_ethnicity.hispanic'][df[df['school.name'] == val].index[0]], "%")
   percent_asian = "{:.2%}".format(df['latest.student.demographics.race_ethnicity.asian'][df[df['school.name'] == val].index[0]], "%")
-  
+
+'''
+
+'''
 if __name__== "__main__":
     print("Admissions Info:")
     if df['latest.admissions.admission_rate.overall'][df[df['school.name'] == val].index[0]] !=0:
@@ -70,4 +74,4 @@ if __name__== "__main__":
     print("Average salary after 8 years of entry:", "${:,.2f}".format(df['latest.earnings.8_yrs_after_entry.mean_earnings'][df[df['school.name'] == val].index[0]]))
     print("Average salary after 10 years of entry:", "${:,.2f}".format(df['latest.earnings.10_yrs_after_entry.working_not_enrolled.mean_earnings'][df[df['school.name'] == val].index[0]]))
 
-
+'''
