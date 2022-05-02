@@ -6,7 +6,6 @@ from app.college_data import get_data
 
 home_routes = Blueprint("home_routes", __name__)
 
-@home_routes.route("/")
 @home_routes.route("/home")
 def index():
     print("HOME...")
@@ -14,15 +13,14 @@ def index():
     return render_template("homes.html")
 
 
-@home_routes.route("/collegedata")
+@home_routes.route("/college/data")
 def university():
-    print("WEATHER FORECAST (API)...")
-    print("URL PARAMS:", dict(request.args))
+    print("URL PARAMS:", dict(request.form))
 
-    country_code = request.args.get("country_code") or "US"
-    zip_code = request.args.get("zip_code") or "20057"
+    form_data = dict(request.form)
+    data = request.args.get("College") 
 
-    results = get_data(val=val)
+    results = get_data(val=data)
     if results:
         return jsonify(results)
     else:
