@@ -20,7 +20,7 @@ def university():
     form_data = dict(request.form)
     data = request.args.get("College") 
 
-    results = get_data(val=data)
+    results = get_data(val=val)
     if results:
         return jsonify(results)
     else:
