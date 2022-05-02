@@ -28,6 +28,13 @@ def university():
         return jsonify({"message":"Invalid Geography. Please try again."}), 404
 
 
+@home_routes.route("/help")
+def help():
+    url_params = dict(request.args)
+    print("URL PARAMS:", url_params)
+    message = f"This is the help page!"
+    return message
+
 
 @home_routes.route("/api/college/data")
 def data_api():
