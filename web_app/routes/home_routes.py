@@ -32,8 +32,7 @@ def university():
 def help():
     url_params = dict(request.args)
     print("URL PARAMS:", url_params)
-    message = f"This is the help page!"
-    return message
+    return render_template("help.html")
 
 
 @home_routes.route("/api/college/data")
