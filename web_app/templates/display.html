@@ -1,0 +1,24 @@
+{% extends "bootstrap_layout.html" %}
+
+{% block content %}
+
+    <h2>Quick facts for {{ results["College"] }}</h2>
+
+    <!-- TODO: consider using a table instead of a list -->
+    <!-- TODO: consider adding images using the provided icon urls -->
+    <ul>
+    {% for val in results["get_data"] %}
+        <li>{{ score["average_sat"] }} | {{ score["median_math_sat"] }} 
+             |{{ score["median_verbal_sat"] }} | {{ score["average_act"] }}
+             | {{ score["acceptance_rate"] }} | {{ score["retention"] }} 
+             | {{ score["enrollment"] }} | {{ score["location"] }}
+             | {{ score["percent_white"] }} | {{ score["percent_black"] }}
+             | {{ score["percent_asian"] }} | {{ score["percent_hispanic"] }}
+             | {{ score["in_state"] }} | {{ score["out_state"] }}
+             | {{ score["grad_rate"] }} | {{ score["salary_6"] }}
+             | {{ score["salary_8"] }} | {{ score["salary_10"] }}
+        </li>
+    {% endfor %}
+    </ul>
+
+{% endblock %}

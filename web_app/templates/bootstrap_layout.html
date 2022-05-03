@@ -37,7 +37,7 @@
         https://getbootstrap.com/docs/5.0/components/navbar/
     -->
     {% set nav_links = [
-      ('/help', 'Help', 'Help'),
+      ('/help', 'Help', 'Help'), ('/About', 'About', 'About')
     ] -%}
     {% set active_page = active_page|default('homes') -%}
     <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
@@ -78,12 +78,7 @@
             {% block content %}
             {% endblock %}
         </div>
-  
-      <!-- FOOTER -->
-      <footer>
-        <hr>
-        &copy; Copyright 2021 Domimnic Parente |
-      </footer>
+
     </div>
   
 
