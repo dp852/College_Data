@@ -23,7 +23,7 @@ def university():
 
     results = get_data(val=college_name)
     if results:
-        return jsonify(results)
+        return render_template("display.html", college=college_name, results=results)
     else:
         return render_template("homes.html")
 
@@ -53,4 +53,4 @@ def data_api():
     if results:
         return jsonify(results)
     else:
-        return jsonify({"message":"Invalid Geography. Please try again."}), 404
+        return jsonify({"message":"Invalid College. Please try again."}), 404

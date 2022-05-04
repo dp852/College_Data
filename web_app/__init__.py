@@ -1,5 +1,9 @@
 # web_app/__init__.py
 
+import os 
+
+APP_ENV = os.getenv("APP_ENV", default="development")
+
 from flask import Flask
 
 from web_app.routes.home_routes import home_routes

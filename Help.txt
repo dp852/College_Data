@@ -1,6 +1,4 @@
 Things I need help with:
--testing (Clyde)
--Read.me (Ask Clyde)
 -Formatting data well (Rossetti, but try myself more first)
 -If error happens (Clyde)
 

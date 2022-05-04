@@ -2,23 +2,38 @@
 
 {% block content %}
 
-    <h2>Quick facts for {{ results["College"] }}</h2>
+    <h2>Quick facts for {{ results["College"] }}</h2><br>
 
     <!-- TODO: consider using a table instead of a list -->
     <!-- TODO: consider adding images using the provided icon urls -->
     <ul>
-    {% for val in results["get_data"] %}
-        <li>{{ score["average_sat"] }} | {{ score["median_math_sat"] }} 
-             |{{ score["median_verbal_sat"] }} | {{ score["average_act"] }}
-             | {{ score["acceptance_rate"] }} | {{ score["retention"] }} 
-             | {{ score["enrollment"] }} | {{ score["location"] }}
-             | {{ score["percent_white"] }} | {{ score["percent_black"] }}
-             | {{ score["percent_asian"] }} | {{ score["percent_hispanic"] }}
-             | {{ score["in_state"] }} | {{ score["out_state"] }}
-             | {{ score["grad_rate"] }} | {{ score["salary_6"] }}
-             | {{ score["salary_8"] }} | {{ score["salary_10"] }}
-        </li>
-    {% endfor %}
+        <h3>Admissions Information</h3>
+        <p> 
+             Median SAT: {{ results["Average SAT"] }} <br>
+             Median Math SAT: {{ results["Average Math SAT"] }} <br>
+             Median Verbal SAT: {{ results["Average Verbal SAT"] }} <br>
+             Median ACT: {{ results["Average ACT"] }} <br>
+             Acceptance Rate: {{ results["Acceptance Rate"] }} <br>
+             Median ACT: {{ results["Average ACT"] }} <br>
+
+        <h3>Tuition</h3>
+        <p>
+             In-State Tuition: {{ results["In-state Tuition"] }} <br>
+             Out-of-State Tuition: {{ results["Out-of-state Tuition"] }} <br>
+        
+        <h3>Student life</h3>
+        <p>
+            Location: {{ results["Location"] }} <br>
+            Demographics: {{ results["Percent White"] }} white, {{ results["Percent Black"] }} black, {{ results["Percent Asian"] }} asian, {{ results["Percent Hispanic"] }} hispanic <br>
+            Retention Rate: {{ results["Retention Rate"] }} <br>
+
+        <h3>Student Outcomes</h3>
+        <p>
+            Graduation Rate: {{ results["Graduation Rate"] }} <br>
+            Average Salary 6-Years Post Entry: {{ results["Salary 6-years Post Entry"] }} <br>
+            Average Salary 8-Years Post Entry: {{ results["Salary 8-years Post Entry"] }} <br>
+            Average Salary 10-Years Post Entry: {{ results["Salary 10-years Post-Entry"] }} <br>
+        
     </ul>
 
 {% endblock %}
