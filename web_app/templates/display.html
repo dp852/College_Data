@@ -9,12 +9,11 @@
     <ul>
         <h3>Admissions Information</h3>
         <p> 
-             Median SAT: {{ results["Average SAT"] }} <br>
-             Median Math SAT: {{ results["Average Math SAT"] }} <br>
-             Median Verbal SAT: {{ results["Average Verbal SAT"] }} <br>
-             Median ACT: {{ results["Average ACT"] }} <br>
+             Median SAT: {{ results["Average SAT"] }}, Range: {{ results["lower_SAT"] }}-{{ results["upper_SAT"] }} <br>
+             Median Math SAT: {{ results["Average Math SAT"] }}, Range: {{ results["lower_math"] }}-{{ results["upper_math"] }} <br> 
+             Median Verbal SAT: {{ results["Average Verbal SAT"] }}, Range: {{ results["lower_verbal"] }}-{{ results["upper_verbal"] }} <br> 
+             Median ACT: {{ results["Average ACT"] }}, Range: {{ results["lower_ACT"] }}-{{ results["upper_ACT"] }} <br>
              Acceptance Rate: {{ results["Acceptance Rate"] }} <br>
-             Median ACT: {{ results["Average ACT"] }} <br>
 
         <h3>Tuition</h3>
         <p>
@@ -29,7 +28,7 @@
 
         <h3>Student Outcomes</h3>
         <p>
-            Graduation Rate: {{ results["Graduation Rate"] }} <br>
+            4-Year Graduation Rate: {{ results["Graduation Rate"] }} <br>
             Average Salary 6-Years Post Entry: {{ results["Salary 6-years Post Entry"] }} <br>
             Average Salary 8-Years Post Entry: {{ results["Salary 8-years Post Entry"] }} <br>
             Average Salary 10-Years Post Entry: {{ results["Salary 10-years Post-Entry"] }} <br>
