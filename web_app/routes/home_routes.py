@@ -14,7 +14,7 @@ def index():
     return render_template("homes.html")
 
 
-@home_routes.route("/college/data", methods=["POST"])
+@home_routes.route("/college/data", methods=["GET", "POST"])
 def university():
     print("URL PARAMS:", dict(request.form))
 
@@ -25,7 +25,7 @@ def university():
     if results:
         return render_template("display.html", college=college_name, results=results)
     else:
-        return render_template("homes.html")
+        return redirect("/")
 
 
 @home_routes.route("/help")
